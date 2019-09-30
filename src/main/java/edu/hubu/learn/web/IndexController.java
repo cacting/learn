@@ -49,4 +49,13 @@ public class IndexController {
         return mav;
     }
 
+    @RequestMapping("/music/{id}")
+    public ModelAndView getMusic(@PathVariable Long id) {
+        ModelAndView mav = new ModelAndView();
+        Music music = musicService.getMusic(id);
+        mav.addObject("music", music);
+        mav.setViewName("music");
+        return mav;
+    }
+
 }
