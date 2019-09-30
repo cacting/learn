@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
     import edu.hubu.learn.entity.Music;
     import edu.hubu.learn.service.MusicService;
     
-    
     @Controller
-    @RequestMapping("/user")
+    @RequestMapping("/music")
     public class MusicController {
     
     

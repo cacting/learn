@@ -18,4 +18,9 @@ public class MusicService {
         return musicDao.findById(id).get();
     }
 
+	public List<Music> getMusics() {
+		return null;
+	}
+
+
 }

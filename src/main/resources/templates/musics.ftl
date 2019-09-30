@@ -2,9 +2,9 @@
 <head></head>
 <body>
 <table>
-<#list musics1 as music1>
+<#list musics1 as music123>
 <tr>
-<td>${music1.songname}</td><td>${music.singer}</td>
+<td>${music123.songname}</td><td>${music123.singer}</td>
 </tr>
 </#list>
 </table>
