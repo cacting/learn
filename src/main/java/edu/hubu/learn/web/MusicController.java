@@ -20,12 +20,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
         @Autowired
         private MusicService musicService;
     
-    
-    
+      
         @RequestMapping("/{id}")
         public ModelAndView music(@PathVariable Long id) {
             ModelAndView mav = new ModelAndView();
-            Music music = musicService.getMusic(id);
+            Music music = musicService.getMusic(1l);
             mav.addObject("music", music);
             mav.setViewName("music");
             return mav;
@@ -36,7 +35,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
         public ModelAndView musics() {
             ModelAndView mav = new ModelAndView();
             List<Music> musics = musicService.getMusics();
-            mav.addObject("musics1", musics);
+            mav.addObject("musics", musics);
             mav.setViewName("musics");
             return mav;
         }
