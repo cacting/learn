@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
         @RequestMapping("/{id}")
         public ModelAndView music(@PathVariable Long id) {
             ModelAndView mav = new ModelAndView();
-            Music music = musicService.getMusic(1l);
+            Music music = musicService.getMusic(id);
             mav.addObject("music", music);
             mav.setViewName("music");
             return mav;

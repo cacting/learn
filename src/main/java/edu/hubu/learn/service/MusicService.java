@@ -19,7 +19,7 @@ public class MusicService {
     }
 
 	public List<Music> getMusics() {
-		return null;
+		return musicDao.findAll();
 	}
 
 
