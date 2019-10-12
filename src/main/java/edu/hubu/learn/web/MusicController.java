@@ -39,6 +39,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
             mav.setViewName("musics");
             return mav;
         }
-    
-        
+
+
+        @RequestMapping("/add")
+        public ModelAndView doAddmusic(Music music) {
+            ModelAndView mav = new ModelAndView();
+            mav.setViewName("music_add");
+            return mav;
+        }
+
+        @RequestMapping("/do_add")
+        public ModelAndView doAddMusic(Music music) {
+            
+            musicService.addMusic(music);
+            ModelAndView mav = new ModelAndView("redirect:/music/list");
+            return mav;
+        }
     }

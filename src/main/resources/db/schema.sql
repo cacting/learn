@@ -26,7 +26,3 @@ CREATE TABLE `music` (
   PRIMARY KEY (`id`)
 );
 
-INSERT INTO music VALUES(1, 'young','tailer');
-INSERT INTO music VALUES(2, '断桥残雪','许嵩');
-INSERT INTO music VALUES(3, '光年之外','邓紫棋');
-INSERT INTO music VALUES(4, '知否知否','郁可唯');

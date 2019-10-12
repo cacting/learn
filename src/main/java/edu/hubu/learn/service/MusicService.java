@@ -22,5 +22,10 @@ public class MusicService {
 		return musicDao.findAll();
 	}
 
+	public Music addMusic(Music music) {
+        return musicDao.save(music);
+    }
+
+
 
 }

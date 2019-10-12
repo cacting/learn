@@ -10,9 +10,15 @@ public class Music {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
     private String songname;
 
     private String singer;
+
+    @Column(name="avatar_url")
+    private String avatar;
+
+	
 }
