@@ -1,11 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 
 <head>
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Bootstrap 101 Template</title>
+    <title>主页</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,18 +26,22 @@
           <ul class ="nav nav-pills nav-stacked">
             <li role="presentation" class="active"><a href="/music/list">列表</a></li>
             <li role="presentation"><a href="/music/add">新增</a></li>
-            <li role="presentation"><a href=" ">搜索</a></li>
+            <li role="presentation"><a href="/music/search">搜索</a></li>
           </ul>
         </div>
         <div class ="col-md-8">
           <table class="table table-hover">
             <thead>
             <th>ID</th><th>歌曲</th><th>歌手</th>
+            <th>删除</th><th>修改</th>
             </thead>
             <tbody>
             <#list musics as music123>
             <tr>
             <td>${music123.id}</td><td>${music123.songname}</td><td>${music123.singer}</td>
+            <td><a href="/music/delete/${music123.id}">删除</a></td>
+            <td><a href="/music/modify/${music123.id}">修改</a></td>
+            
             </tr>
              </#list>
             </tbody>
