@@ -20,8 +20,5 @@ public class Music {
     @Column(name="avatar_url")
     private String avatar;
 
-	public void setMusicname(String string) {
-	}
-
 	
 }

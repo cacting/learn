@@ -11,7 +11,10 @@ import org.springframework.data.domain.Sort.Direction;
 
 import edu.hubu.learn.dao.MusicDao;
 import edu.hubu.learn.entity.Music;
+import lombok.extern.slf4j.Slf4j;
 
+
+@Slf4j
 @Service
 public class MusicService {
 
@@ -29,9 +32,10 @@ public class MusicService {
     }
 
     public List<Music> searchMusics(String keyword) {
+        log.info(keyword);
         Music music = new Music();
-        music.setMusicname("keyword");
-        ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("musicname", match->match.contains());
+        music.setSongname(keyword);
+        ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("songname", match->match.contains());
         Example<Music> example = Example.of(music, matcher);
         Sort sort = new Sort(Direction.DESC, "id");
         return musicDao.findAll(example, sort);

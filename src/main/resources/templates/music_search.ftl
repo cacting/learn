@@ -23,7 +23,7 @@
       <ul class="nav nav-pills nav-stacked">
         <li role="presentation" ><a href="/music/list">列表</a></li>
         <li role="presentation" ><a href="/music/add">新增</a></li>
-        <li role="presentation" class="active"><a href="#">搜索</a></li>
+        <li role="presentation" class="active"><a href="/music/search">搜索</a></li>
         
       </ul>
     </div>
